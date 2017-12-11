@@ -1,0 +1,36 @@
+{% extends "visualization/header.html" %}
+
+{% block content %}
+<style type="text/css">
+  .graph {
+    position: absolute;
+  }
+</style>
+
+<script>
+  function toggleVisibility(id) {
+   var el = document.getElementById(id);
+
+   if (el.style.visibility=="visible") {
+          el.style.visibility="hidden";
+     }
+     else {
+          el.style.visibility="visible";
+     }
+ }
+</script>
+{% endblock %}
+
+{% block checkboxes %}
+  {% for c in checkboxes %}
+    {{c |safe }}
+  {% endfor %}
+{% endblock %}
+
+{% block images %}
+  <div id="graph-container" style="position:relative">
+  {% for i in images %}
+    <img src="{{ MEDIA_URL }}/media/{{i |safe }}.png" id="{{i |safe }}" class="graph" style="visibility: visible;">
+  {% endfor %}
+  </div>
+{% endblock %}

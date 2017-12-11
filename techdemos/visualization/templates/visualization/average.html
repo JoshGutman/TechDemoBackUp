@@ -1,0 +1,42 @@
+{% extends "visualization/header.html" %}
+
+{% block content %}
+<style type="text/css">
+  .graph {
+    position: absolute;
+  }
+</style>
+
+<script>
+  function toggleVisibility() {
+   var els = document.getElementById("graph-container").children;
+   for(var i = 0; i < els.length; i++){
+     els[i].style.visibility = "hidden";
+   }
+
+   var cb = document.getElementById("obv").value;
+   var selection = document.getElementById(cb);
+   selection.style.visibility = "visible";
+ }
+</script>
+
+{% endblock %}
+
+{% block combobox %}
+  <select id="obv" onchange="toggleVisibility()">
+  {% for c in combobox %}
+      <option value="{{c |safe }}">{{c |safe }}</option>
+  {% endfor %}
+  </select>
+{% endblock %}
+
+{% block images %}
+  <div id="graph-container" style="position:relative">
+  {% for i in images %}
+    <img src="{{ MEDIA_URL }}/media/{{i |safe }}.png" id="{{i |safe }}" class="graph" style="visibility: visible;">
+  {% endfor %}
+  </div>
+  <script>
+    toggleVisibility();
+  </script>
+{% endblock %}

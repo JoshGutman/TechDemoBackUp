@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Visualizations</title>
+	<meta charset="utf-8" />
+
+	<link rel="stylesheet" href="/static/visualization/css/bootstrap.min.css" type = "text/css"/>
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+		html,
+		body {
+		  height:100%
+		}
+	</style>
+</head>
+
+<body class="body" style="background-color:#f6f6f6">
+	<div class="container-fluid" style="min-height:95%; ">
+		<div class="row">
+			  <div class="col-sm-2">
+				  <br>
+				  <center>
+					<img src="/static/visualization/img/logo.png" class="responsive-img" style='max-height:100px;' alt="logo">
+				  </center>
+			  </div>
+			  <div class="col-sm-10">
+				  <br>
+				  <center>
+				  <h3>Visualizations</h3>
+				  </center>
+			  </div>
+		</div><hr>
+
+		<div class="row">
+		  <div class="col-sm-2">
+		  <br>
+
+		  <br>
+
+		  </div> <!--col-sm-2-->
+		  <div class="col-sm-10">
+
+			<div class='container-fluid'>
+			<br><br>
+
+<style type="text/css">
+  .graph {
+    position: absolute;
+  }
+</style>
+
+<script>
+  function toggleVisibility(id) {
+   var el = document.getElementById(id);
+
+   if (el.style.visibility=="visible") {
+          el.style.visibility="hidden";
+     }
+     else {
+          el.style.visibility="visible";
+     }
+ }
+</script>
+
+				 <br>
+
+
+    <label for="Ltot_box">Ltot</label> <input type="checkbox" id="Ltot_box" checked onChange="toggleVisibility('Ltot');" />
+
+    <label for="freeL_box">freeL</label> <input type="checkbox" id="freeL_box" checked onChange="toggleVisibility('freeL');" />
+
+    <label for="Rtot_box">Rtot</label> <input type="checkbox" id="Rtot_box" checked onChange="toggleVisibility('Rtot');" />
+
+    <label for="Rdim_box">Rdim</label> <input type="checkbox" id="Rdim_box" checked onChange="toggleVisibility('Rdim');" />
+
+    <label for="RLbonds_box">RLbonds</label> <input type="checkbox" id="RLbonds_box" checked onChange="toggleVisibility('RLbonds');" />
+
+    <label for="pR_box">pR</label> <input type="checkbox" id="pR_box" checked onChange="toggleVisibility('pR');" />
+
+
+				 <br>
+
+  <div id="graph-container" style="position:relative">
+
+    <img id="Ltot" src="C:\Users\Josh\Desktop\BioNetWeb\UIFit-Tech-Demos\techdemos\Ltot.png" class="graph" />
+
+    <img id="freeL" src="C:\Users\Josh\Desktop\BioNetWeb\UIFit-Tech-Demos\techdemos\freeL.png" class="graph" />
+
+    <img id="Rtot" src="C:\Users\Josh\Desktop\BioNetWeb\UIFit-Tech-Demos\techdemos\Rtot.png" class="graph" />
+
+    <img id="Rdim" src="C:\Users\Josh\Desktop\BioNetWeb\UIFit-Tech-Demos\techdemos\Rdim.png" class="graph" />
+
+    <img id="RLbonds" src="C:\Users\Josh\Desktop\BioNetWeb\UIFit-Tech-Demos\techdemos\RLbonds.png" class="graph" />
+
+    <img id="pR" src="C:\Users\Josh\Desktop\BioNetWeb\UIFit-Tech-Demos\techdemos\pR.png" class="graph" />
+
+  </div>
+
+			</div>
+		  </div>
+		</div>
+	</div>
+	<footer>
+		<!---
+		<div class="container-fluid" style='margin-left:15px'>
+			<p><a href="#" target="blank">Contact</a> | <a href="#" target="blank">LinkedIn</a> | <a href="#" target="blank">Twitter</a> | <a href="#" target="blank">Google+</a></p>
+		</div>
+	-->
+	</footer>
+
+</body>
+
+</html>

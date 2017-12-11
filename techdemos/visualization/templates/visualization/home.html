@@ -1,0 +1,9 @@
+{% extends "visualization/header.html" %}
+
+{% block content %}
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="myfile" accept="*.gdat">
+    <input type="submit">
+  </form>
+{% endblock %}
