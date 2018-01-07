@@ -1,0 +1,6 @@
+This is a sample file to be saved onto the MongoDB
+
+All files saved into the database will likely not exceed
+16 MB, and therefore saving these documents should prove to be quite simple.
+
+Created by Tanner Brelje
